@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brand Briefing</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --ink:#1d1b19; --mut:#6d665f; --line:#e6ddd0; --bg:#fbf7f1; --acc:#b4553a; --soft:#f3ebdf; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Inter, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.5; font-size: 16px; }
+.wrap { max-width: 720px; margin: 0 auto; padding: 48px 20px 80px; }
+.kicker { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--acc); font-weight: 600; }
+h1 { font-family: Fraunces, serif; font-weight: 600; font-size: clamp(38px, 9vw, 58px); line-height: 1.03; margin: 14px 0 16px; }
+h1 em { font-weight: 400; color: var(--acc); }
+.lead { font-size: 18px; color: #3b3732; }
+.how { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin: 28px 0; }
+.how div { border-top: 1.5px solid var(--ink); padding-top: 8px; font-size: 14px; color: #3b3732; }
+.how b { display: block; font-family: Fraunces, serif; font-size: 18px; color: var(--ink); }
+.heard { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 20px 22px; }
+.heard h3 { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--acc); margin-bottom: 10px; }
+.heard ul { list-style: none; display: grid; gap: 8px; font-size: 15px; color: #3b3732; }
+.heard li { padding-left: 16px; position: relative; }
+.heard li::before { content: ""; position: absolute; left: 0; top: 9px; width: 7px; height: 7px; border-radius: 50%; background: var(--acc); }
+fieldset { border: 0; margin-top: 56px; }
+legend { font-family: Fraunces, serif; font-weight: 600; font-size: 28px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; }
+legend span { font-family: Inter; font-size: 12px; font-weight: 600; color: var(--acc); letter-spacing: .18em; }
+legend small { font-style: italic; font-weight: 400; font-size: 18px; color: var(--acc); }
+.why { color: var(--mut); font-size: 15px; margin: 6px 0 12px; }
+.q { padding: 18px 0; border-bottom: 1px solid var(--line); }
+.q > label, .q > p { display: block; font-weight: 500; }
+.n { color: var(--acc); font-weight: 600; margin-right: 6px; }
+.q small { display: block; color: var(--mut); font-size: 13.5px; margin: 2px 0 8px; }
+textarea, input[type=text] { width: 100%; margin-top: 8px; font: inherit; font-size: 16px; color: var(--ink); background: #fff; border: 1px solid #d9cfc1; border-radius: 12px; padding: 12px 14px; }
+textarea { min-height: 96px; resize: vertical; }
+textarea:focus, input:focus { outline: 2px solid var(--acc); outline-offset: 1px; border-color: transparent; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.chips label { cursor: pointer; }
+.chips input { position: absolute; opacity: 0; }
+.chips span { display: inline-block; border: 1px solid #cfc3b2; border-radius: 99px; padding: 8px 14px; font-size: 14.5px; background: #fff; }
+.chips input:checked + span { background: var(--ink); color: #fff; border-color: var(--ink); }
+.chips input:focus-visible + span { outline: 2px solid var(--acc); }
+.scale { margin-top: 14px; }
+.scale .ends { display: flex; justify-content: space-between; font-size: 14px; color: #3b3732; margin-bottom: 6px; }
+.scale .dots { display: flex; justify-content: space-between; }
+.scale .dots label { flex: 1; display: flex; justify-content: center; cursor: pointer; padding: 6px 0; }
+.scale .dots input { position: absolute; opacity: 0; }
+.scale .dots span { width: 26px; height: 26px; border: 1.5px solid #b9ad9c; border-radius: 50%; background: #fff; }
+.scale .dots input:checked + span { background: var(--acc); border-color: var(--acc); box-shadow: inset 0 0 0 4px #fff; }
+.dd { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 10px; }
+@media (max-width: 560px) { .dd { grid-template-columns: 1fr; } }
+.dd b { font-size: 15px; }
+.file { margin-top: 10px; background: #fff; border: 1.5px dashed #cfc3b2; border-radius: 12px; padding: 14px; font-size: 14px; }
+.file input { width: 100%; margin-top: 6px; font-size: 14px; }
+.send { margin-top: 48px; background: var(--soft); border-radius: 18px; padding: 24px; }
+.send h3 { font-family: Fraunces, serif; font-size: 22px; margin-bottom: 8px; }
+.send ol { padding-left: 20px; color: #3b3732; font-size: 15px; display: grid; gap: 4px; margin-bottom: 18px; }
+button { width: 100%; font: inherit; font-weight: 600; font-size: 17px; background: var(--ink); color: #fff; border: 0; border-radius: 99px; padding: 16px; cursor: pointer; }
+button:hover { background: var(--acc); }
+.note { font-size: 13px; color: var(--mut); text-align: center; margin-top: 10px; }
+</style></head><body><div class="wrap">
+
+<p class="kicker">Brand briefing · Kit de identidade</p>
+<h1>Vamos dar <em>cara e voz</em> à sua marca.</h1>
+<p class="lead">Este questionário é o ponto de partida do seu logo, do manual da marca e dos templates do Instagram. Quanto mais você contar, mais a marca vai parecer você.</p>
+<div class="how">
+  <div><b>~25 minutos</b>Pode pular o que não souber.</div>
+  <div><b>Sem resposta certa</b>Vale "não sei", "tanto faz" e "odeio isso".</div>
+  <div><b>Imagens aqui mesmo</b>No fim dá pra anexar logos, referências e fotos.</div>
+</div>
+<div class="heard">
+  <h3>What we heard · o que já entendemos</h3>
+  <ul>
+    <li>Marca própria de inglês, separada da escola onde você dá aula hoje.</li>
+    <li>Público: quem precisa do inglês pra avançar na carreira, mas trava por falta de confiança, ansiedade, "congelamento" ou dificuldade de pronúncia.</li>
+    <li>Primeiras 8 semanas: autoridade no Instagram. Depois: turmas, aulas individuais, comunidade e inglês para empresas.</li>
+    <li>Voz da marca: autêntica, sensível, criativa, determinada, competente e curiosa.</li>
+    <li>Templates editáveis no seu Canva: capa de reels, carrossel de 8 a 10 páginas e 3 stories.</li>
+  </ul>
+</div>
+
+<form id="f" action="https://formsubmit.co/msaboia2001@gmail.com" method="POST" enctype="multipart/form-data">
+<input type="hidden" name="_subject" value="Brand Briefing · respostas da cliente">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="https://boiamatheus.github.io/brand-briefing/obrigado.html">
+<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+<div id="perguntas"></div>
+
+<fieldset>
+  <legend><span>09</span>Imagens<small>moodboard</small></legend>
+  <p class="why">Se preferir, pode mandar pelo WhatsApp. Até uns 5 MB por arquivo.</p>
+  <div class="file">Logos que você acha lindos (logo inspo)<input type="file" name="attachment" accept="image/*,.pdf"></div>
+  <div class="file">Referências visuais (prints de perfis, marcas, Pinterest)<input type="file" name="attachment2" accept="image/*,.pdf"></div>
+  <div class="file">Fotos suas (se tiver)<input type="file" name="attachment3" accept="image/*"></div>
+  <div class="file">Logo, cor ou fonte que você já usa (se tiver)<input type="file" name="attachment4" accept="image/*,.pdf"></div>
+</fieldset>
+
+<div class="send">
+  <h3>Next steps · próximos passos</h3>
+  <ol>
+    <li>Você envia as respostas.</li>
+    <li>Apresentamos o moodboard e a paleta de cores (color palette) pra sua aprovação. Nada segue sem o seu ok.</li>
+    <li>Com o moodboard aprovado, desenvolvemos o logo, o manual e os templates do Canva.</li>
+    <li>Duas rodadas de ajuste e entrega no seu Canva, com um guia rápido de uso.</li>
+  </ol>
+  <button type="submit">Enviar respostas</button>
+  <p class="note">Suas respostas vão direto pra quem vai criar a sua marca.</p>
+</div>
+</form>
+</div>
+
+<script>
+// [tipo, pergunta, ajuda, opções]  tipos: t=texto longo, c=curto, m=marcar várias, u=uma opção, s=escalas, d=do's & don'ts
+const S = [
+ ['01','Você e a sua história','your story','Marca pessoal começa por quem está por trás dela. Essas respostas viram o "sobre mim" e o tom de toda a comunicação.',[
+  ['c','Como você quer ser chamada na marca?','Nome completo, primeiro nome, apelido, "Teacher ___"…'],
+  ['t','Como o inglês entrou na sua vida? Conte a história que você mais gosta de contar.','Viagens, intercâmbio, um momento em que você também travou, uma virada…'],
+  ['t','Há quanto tempo você ensina e qual a sua formação ou certificações?'],
+  ['t','O que você faz diferente de outros professores? Qual é o seu jeito de dar aula?'],
+  ['t','Por que você decidiu criar a sua própria marca agora?'],
+  ['t','Conte a história de um aluno que destravou com você (pode ser sem nome).','Antes e depois dele: como chegou, o que mudou.']]],
+ ['02','O que você vai oferecer','your offer','Mesmo que agora o foco seja autoridade, a marca precisa nascer pronta pro que vem depois.',[
+  ['m','Quais serviços você quer oferecer nos próximos 12 meses?','',['Aulas individuais','Turmas','Comunidade / clube','Inglês para empresas','Curso online','Mentoria']],
+  ['u','As aulas serão online, presenciais ou os dois?','',['Online','Presenciais','Os dois']],
+  ['t','Você já tem um método ou um nome para o seu jeito de ensinar? Se não, gostaria de ter?'],
+  ['c','Qual a faixa de preço que você imagina cobrar?','Só pra marca combinar com o posicionamento.']]],
+ ['03','Quem você quer atrair','your audience','Logo, cores e texto são escolhidos pra conversar com uma pessoa específica. Quanto mais concreta ela for, melhor.',[
+  ['t','Descreva o seu aluno ideal: idade, profissão, cargo, rotina.'],
+  ['t','Em que momento da carreira ele está?','Entrevista, promoção, reuniões em inglês, trabalho remoto…'],
+  ['t','O que ele sente quando precisa falar inglês? Use as palavras que ele usaria.','Ex.: "dá branco", "tenho vergonha do sotaque", "entendo tudo mas não sai".'],
+  ['t','O que ele já tentou antes e não funcionou?'],
+  ['t','Como é a vida dele depois que destrava? O que muda?'],
+  ['t','E as empresas: que tipo de empresa e quem decide contratar (RH, gestor, dono)?']]],
+ ['04','Mercado e referências','references & inspo','Ver o que já existe ajuda a marca a se destacar em vez de parecer mais uma.',[
+  ['t','Cite 3 professores ou escolas de inglês que você acompanha. O que admira e o que não gostaria de copiar?'],
+  ['t','Mande de 3 a 5 perfis ou marcas de QUALQUER área cujo visual você ama. O que te atrai em cada um?','Cole os @ ou links. Moda, café, livraria, outra professora…'],
+  ['t','Brands you love: quais marcas você admira, de qualquer segmento? Por quê?','Pode ser pelo jeito de falar, pelo visual ou pelo que ela representa.'],
+  ['t','Tem algum visual que você não suporta ou que acha "a cara de escola de inglês"?']]],
+ ['05','Personalidade da marca','brand voice','Você escolheu: autêntica, sensível, criativa, determinada, competente e curiosa. Agora vamos calibrar o tom.',[
+  ['s','Escalas de personalidade: marque onde a sua marca fica em cada linha.','',[['Leve e divertida','Séria e formal'],['Acolhedora','Desafiadora'],['Clássica','Moderna'],['Delicada','Marcante'],['Minimalista','Cheia de detalhes'],['Feminina','Neutra'],['Acessível','Premium']]],
+  ['t','Se a sua marca fosse uma pessoa numa festa, como ela seria?'],
+  ['t','Qual a frase que você mais repete para os seus alunos?'],
+  ['u','A comunicação vai ser em português, em inglês ou misturando os dois?','',['Português','Inglês','Misturando os dois']],
+  ['t','O que a marca NUNCA pode parecer?','Ex.: infantil, arrogante, "coach", fria, genérica.'],
+  ['d','Do’s & Don’ts da sua marca: complete com pelo menos 3 de cada.']]],
+ ['06','Nome e logo','name & logo','O logo nasce daqui. Não precisa saber desenhar nada, só contar o que faz sentido pra você.',[
+  ['t','A marca vai usar o seu nome ou terá um nome próprio? Se tiver, qual é (ou quais ideias você tem)?'],
+  ['c','Tem um @ do Instagram definido? Ele já existe?'],
+  ['m','Que tipo de logo te atrai mais?','',['Só o nome escrito','Nome + símbolo','Monograma (iniciais)','Assinatura / manuscrito','Não sei, me surpreendam']],
+  ['t','Logo inspo: quais logos você acha lindos, de qualquer marca? O que gosta em cada um?','Cole links aqui e anexe os prints no fim do formulário. Vale também um logo que você NÃO gosta.'],
+  ['t','Algum símbolo, objeto ou ideia que represente você ou o seu método?','Ex.: ponte, voz, balão de fala, chave, planta crescendo, avião…'],
+  ['t','Você já tem algum logo, cor ou fonte que quer manter?','Se sim, anexe no fim do formulário.']]],
+ ['07','Cores, fontes e fotos','look & feel','',[
+  ['t','Quais cores você ama? E quais não quer de jeito nenhum?'],
+  ['m','Que sensação as cores devem passar?','',['Calma','Energia','Confiança','Sofisticação','Alegria','Acolhimento','Coragem']],
+  ['t','Você tem fotos suas boas para usar? Prefere aparecer bastante ou mais discreta?','Se tiver, anexe algumas no fim. Se não tiver, a gente te orienta sobre o que fotografar.'],
+  ['m','Que tipo de imagem combina com a marca?','',['Fotos minhas','Ilustrações','Texturas e formas','Fotos de rotina e trabalho','Só tipografia']]]],
+ ['08','Conteúdo e uso no dia a dia','content','Os templates do Canva são feitos pro que você realmente vai postar.',[
+  ['m','Quais temas você quer postar no carrossel?','',['Dicas de pronúncia','Erros comuns','Vocabulário de trabalho','Frases pra reunião','Histórias de alunos','Ansiedade ao falar','Bastidores']],
+  ['t','Com que frequência você pretende postar? Quem vai montar os posts no Canva?'],
+  ['t','Nos stories de vídeo ou áudio, o que você vai mostrar?','Aula, explicação, pronúncia, recado…'],
+  ['t','Além do Instagram, onde a marca vai aparecer?','Apresentação pra empresas, material de aula, certificado, site, LinkedIn…'],
+  ['c','Tem algum prazo importante?','Data pra começar a postar, lançamento de turma…'],
+  ['t','Quer contar mais alguma coisa que não perguntamos?']]],
+];
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
+let n = 0, html = '';
+for (const [num, pt, en, why, qs] of S) {
+  html += `<fieldset><legend><span>${num}</span>${pt}<small>${en}</small></legend>${why ? `<p class="why">${why}</p>` : ''}`;
+  for (const [t, q, help, opts] of qs) {
+    n++; const id = 'q' + n; const nm = esc(`${String(n).padStart(2,'0')}. ${q}`);
+    const h = help ? `<small>${help}</small>` : '';
+    if (t === 't') html += `<div class="q"><label for="${id}"><span class="n">${n}.</span>${q}</label>${h}<textarea id="${id}" name="${nm}"></textarea></div>`;
+    if (t === 'c') html += `<div class="q"><label for="${id}"><span class="n">${n}.</span>${q}</label>${h}<input type="text" id="${id}" name="${nm}"></div>`;
+    if (t === 'm' || t === 'u') html += `<div class="q"><p><span class="n">${n}.</span>${q}</p>${h}<div class="chips" data-join="${nm}">${opts.map(o => `<label><input type="${t === 'm' ? 'checkbox' : 'radio'}" ${t === 'u' ? `name="${nm}"` : ''} value="${esc(o)}"><span>${o}</span></label>`).join('')}</div><input type="text" ${t === 'm' ? `data-other="${nm}"` : `name="${nm} (outro)"`} placeholder="Outro (opcional)"></div>`;
+    if (t === 's') html += `<div class="q"><p><span class="n">${n}.</span>${q}</p>${opts.map(([a, b], k) => `<div class="scale"><div class="ends"><span>${a}</span><span>${b}</span></div><div class="dots">${[1,2,3,4,5].map(v => `<label><input type="radio" name="${esc(`${String(n).padStart(2,'0')}. ${a} (1) a ${b} (5)`)}" value="${v}"><span></span></label>`).join('')}</div></div>`).join('')}</div>`;
+    if (t === 'd') html += `<div class="q"><p><span class="n">${n}.</span>${q}</p><div class="dd"><div><b>Do’s · a minha marca SEMPRE…</b><small>Ex.: fala com carinho de quem trava; mostra os bastidores</small><textarea name="${esc(`${String(n).padStart(2,'0')}. Do's · a marca SEMPRE`)}"></textarea></div><div><b>Don’ts · a minha marca NUNCA…</b><small>Ex.: ri do erro do aluno; promete fluência em 30 dias</small><textarea name="${esc(`${String(n).padStart(2,'0')}. Don'ts · a marca NUNCA`)}"></textarea></div></div></div>`;
+  }
+  html += `</fieldset>`;
+}
+document.getElementById('perguntas').innerHTML = html;
+// junta as caixinhas marcadas (e o "outro") num campo só por pergunta, pra chegar legível no e-mail
+document.getElementById('f').addEventListener('submit', e => {
+  document.querySelectorAll('.chips[data-join]').forEach(c => {
+    const nm = c.dataset.join; const boxes = c.querySelectorAll('input[type=checkbox]');
+    if (!boxes.length) return;
+    const vals = [...boxes].filter(b => b.checked).map(b => b.value);
+    const other = c.parentElement.querySelector(`input[data-other]`); if (other && other.value.trim()) vals.push('Outro: ' + other.value.trim());
+    let h = e.target.querySelector(`input[type=hidden][name="${CSS.escape(nm)}"]`);
+    if (!h) { h = document.createElement('input'); h.type = 'hidden'; h.name = nm; e.target.appendChild(h); }
+    h.value = vals.join(', ');
+  });
+});
+</script>
+</body></html>
